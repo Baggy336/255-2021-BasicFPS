@@ -17,6 +17,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        // Lock the mouse to the bounds of the screen.
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         pawn = GetComponent<CharacterController>();
         cam = GetComponentInChildren<Camera>();
     }
