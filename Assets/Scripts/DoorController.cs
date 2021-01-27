@@ -45,6 +45,8 @@ public class DoorController : MonoBehaviour
     {        
         if (animIsPlaying) return; // Do nothing
 
+        if (!Inventory.main.hasCube) return; // If the player doesn't have the key do nothing.
+
         Vector3 disToPlayer = position - transform.position;
         disToPlayer = disToPlayer.normalized; // Makes it between 0 and 1
 
